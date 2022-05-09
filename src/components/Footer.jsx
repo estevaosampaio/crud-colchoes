@@ -11,7 +11,6 @@ const Footer = () => {
                 <Typography variant="subtitle1" align="center" color="text.secondary" component="p">
                     Trabalho Final - Estevão & Lecino
                 </Typography>
-                {/* <Copyright /> */}
             </Box>
         </div>
     );

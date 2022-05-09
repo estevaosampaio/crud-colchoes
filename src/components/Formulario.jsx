@@ -23,7 +23,6 @@ export const Formulario = ({ tituloFormulario }) => {
     const [open, setOpen] = useState(false);
     const [enviando, setEnviando] = useState();
     const [error, setError] = useState(false);
-    // const [loading, setLoading] = useState()
 
     const valorInput = (e) => setColchao({ ...colchao, [e.target.name]: e.target.value });
 
@@ -106,9 +105,7 @@ export const Formulario = ({ tituloFormulario }) => {
                                     <TextField fullWidth label="Url da Imagem" name="urlImagem" onChange={valorInput} />
                                 </Grid>
                             </Grid>
-                            {/* <Button type="submit" fullWidth variant="contained" sx={{ mt: 3, mb: 2, bgcolor: '#4e20a5' }}>
-                                Enviar
-                            </Button> */}
+
                             <LoadingButton type="submit" fullWidth loading={enviando} loadingPosition="start" startIcon={<SendIcon />} variant="contained" sx={{ mt: 3, mb: 2, bgcolor: '#4e20a5' }}>
                                 Enviar
                             </LoadingButton>

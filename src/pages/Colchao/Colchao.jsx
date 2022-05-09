@@ -42,12 +42,12 @@ const Colchao = () => {
             .then((response) => {
                 setOpen(true);
                 setErrorDelete(false);
-                setErrorSubmit(false)
+                setErrorSubmit(false);
                 setEditando(false);
             })
             .catch((err) => {
                 setOpen(true);
-                setErrorDelete(false)
+                setErrorDelete(false);
                 setErrorSubmit('Erro ao editar produto!');
                 setEditando(false);
             });
@@ -63,7 +63,7 @@ const Colchao = () => {
             })
             .catch((err) => {
                 setOpen(true);
-                setErrorSubmit(false)
+                setErrorSubmit(false);
                 setErrorDelete('Não foi possível deletar item!');
             });
     };
@@ -112,7 +112,7 @@ const Colchao = () => {
                 <Alert onClose={handleClose} severity={errorSubmit || errorDelete ? 'error' : 'success'} sx={{ width: '100%' }} variant="filled">
                     {errorSubmit && 'Erro ao editar produto!'}
                     {errorDelete && 'Erro ao deletar produto!'}
-                    {!errorSubmit && !errorDelete && 'Produto Editado!'}
+                    {!errorSubmit && !errorDelete && 'Produto Editado com sucesso!'}
                 </Alert>
             </Snackbar>
 
@@ -149,7 +149,6 @@ const Colchao = () => {
 
                     <Grid item xs={12} sm={6}>
                         <Container component="main" maxWidth="xs">
-                            {/* <CssBaseline /> */}
                             <Box
                                 sx={{
                                     marginTop: 2,
